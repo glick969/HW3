@@ -28,5 +28,3 @@ INSERT INTO GIFTCARD (cardName, cardType, cardValue, points) VALUES
     ('Spotify $30 Gift Card',        'Entertainment', 30.00,  3000),
     ('Steam $50 Gift Card',          'Entertainment', 50.00,  5000),
     ('Fandango $20 Gift Card',       'Entertainment', 20.00,  2000);
-
-SELECT ALL from GIFTCARD;

@@ -4,8 +4,8 @@
 
 const GIFT_CARD_TYPES = ['Retail', 'Dining', 'Travel', 'Entertainment'];
 const CARD_NAME_MAX_LENGTH = 100;   
-const CARD_VALUE_MAX = 10000;       
-const CARD_POINTS_MAX = 1000000;    
+const CARD_VALUE_MAX = 10000;
+const CARD_POINTS_MAX = 1000000;
 
 /**
  * Returns a trimmed string, or an empty string if the value is missing

@@ -115,9 +115,3 @@ The GIFTCARD count stayed at 20 the whole time.
 **Actual result:** Every bad ID (`abc`, `0`, `-5`, `xyz`, `1 OR 1=1`, the array, and the missing ID) showed "That gift card ID is not valid." with HTTP 400. Every ID that doesn't exist (`9999`) showed "No gift card was found with that ID." with HTTP 404. All of them had the Return to Gift Card List link. The server log had no warnings, and the GIFTCARD count didn't change.
 
 **Status:** Pass
-
-## Defects found and fixed
-
-| Problem | Fix | Retest |
-|---|---|---|
-| On `tests/validation-tests.php`, the Input column printed each test array with `print_r()`. It was very tall, and the 101-character name in the "over 100 characters" test pushed the table off the side of the page. | Added a `describe_input()` function that shows each input on one short line and shortens long strings, for example `"AAAAAAAAAAAA..." (101 characters)`. | Reloaded the page. The table fits on the page and all 18 tests still pass. |

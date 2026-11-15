@@ -2,7 +2,8 @@
 
 IS 6465 Web Application Development
 
-HW3 turns the Gift Card pages from my HW2 prototype into a working PHP app. Gift cards are stored in a SQLite database and managed through PDO, so you can list, view, add, update, and delete them. Login, sessions, customers, and redemption are part of HW4, so they aren't in this version.
+HW3 turns the Gift Card pages from my HW2 prototype into a working PHP app. Gift cards are stored in a SQLite database and managed through PDO, so you can list, view, add, update, and delete them.
+
 
 ## Running it
 
@@ -50,7 +51,7 @@ airasia-hw3/
 │   ├── seed.sql           5 accounts and 20 gift cards
 │   └── rewards.db         the SQLite database
 ├── tests/
-│   └── validation-tests.php
+│   └── validation-tests.php   
 ├── css/styles.css
 ├── images/gift-card.png
 ├── README.md
@@ -73,7 +74,7 @@ The requirements document doesn't have an image column for gift cards, so every 
 
 All of these are checked on the server in `includes/validation.php`, even though the forms also have `required` and number limits.
 
-- Card Name: required, 100 characters max (matches varchar(100))
+- Card Name: required, 100 characters max
 - Card Type: has to be Retail, Dining, Travel, or Entertainment
 - Card Value: a dollar amount over $0 with up to 2 decimals, $10,000 max
 - Points Required: a whole number over 0, 1,000,000 max
@@ -87,6 +88,6 @@ Every query that uses a form or URL value is a prepared statement, and every val
 |---|---|---|---|
 | View a List of Gift Cards | card-list.php | GIFTCARD | Opened card-list.php and confirmed all 20 seeded cards showed an image, name, and points, with each name and image linking to card-details.php?card_id=... (T02). |
 | View Details of One Gift Card | card-details.php | GIFTCARD | Opened card-details.php?card_id=1 and confirmed it showed Amazon $50 Gift Card with all its attributes and the Update, Delete, and Return links (T03). |
-| Add a Gift Card | card-add.php, card-list.php | GIFTCARD | Submitted valid Gift Card data and confirmed the new record appeared on card-list.php (T04). |
-| Update a Gift Card | card-update.php, card-details.php | GIFTCARD | Changed card 6 to Starbucks $30 Gift Card and confirmed card-details.php showed the new values (T05). |
-| Delete a Gift Card | card-delete.php, card-list.php | GIFTCARD | Opened the delete page, confirmed nothing was deleted until I clicked Delete, then confirmed the card was gone from card-list.php (T06). |
+| Add a Gift Card | card-add.php | GIFTCARD | Submitted valid Gift Card data and confirmed the new record appeared on card-list.php (T04). |
+| Update a Gift Card | card-update.php | GIFTCARD | Changed card 6 to Starbucks $30 Gift Card and confirmed card-details.php showed the new values (T05). |
+| Delete a Gift Card | card-delete.php | GIFTCARD | Opened the delete page, confirmed nothing was deleted until I clicked delete, then confirmed the card was gone from card-list.php (T06). |

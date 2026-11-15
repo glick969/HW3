@@ -1,7 +1,7 @@
 <?php
 // Validation test harness.
 // Tests the functions in includes/validation.php only.
-// It does not connect to the database, so no records are added, changed, or deleted.
+// Does not connect to the database, so no records are added, changed, or deleted
 
 require_once __DIR__ . '/../includes/validation.php';
 
@@ -12,7 +12,7 @@ $validCard = [
     'points' => '5000',
 ];
 
-// Each gift card test: name, input, whether it should pass, and which field should fail.
+// Each gift card test: name, input, whether it should pass, and which field should fail
 $cardTests = [
     ['Valid Gift Card data', $validCard, true, null],
     ['Blank Card Name', array_merge($validCard, ['cardName' => '']), false, 'cardName'],
@@ -28,7 +28,7 @@ $cardTests = [
     ['Points Required that is not a number', array_merge($validCard, ['points' => 'five thousand']), false, 'points'],
 ];
 
-// Each card ID test: name, input, expected result (an int or null for invalid).
+// Each card ID test: name, input, expected result (an int or null for invalid)
 $idTests = [
     ['Valid card ID', '12', 12],
     ['Card ID with letters', 'abc', null],
@@ -38,7 +38,7 @@ $idTests = [
     ['Card ID sent as an array', ['1'], null],
 ];
 
-// Shows a test input in one short, readable line.
+// Shows a test input in one short, readable line
 function describe_input($input): string
 {
     if (is_array($input)) {
