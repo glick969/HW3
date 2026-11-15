@@ -7,7 +7,6 @@ $giftCard = null;
 $errorMessage = '';
 $errors = [];
 
-// The ID comes from the URL when the page opens and from a hidden field when the form is submitted.
 $cardId = validate_card_id($isPost ? ($_POST['card_id'] ?? '') : ($_GET['card_id'] ?? ''));
 
 if ($cardId === null) {
@@ -26,7 +25,6 @@ if ($cardId === null) {
 }
 
 if ($giftCard !== null) {
-    // Prepopulate the form with the saved values.
     $values = [
         'cardName' => $giftCard['cardName'],
         'cardType' => $giftCard['cardType'],
@@ -53,7 +51,6 @@ if ($giftCard !== null) {
                 'cardId' => $cardId,
             ]);
 
-            // Show the updated card on the details page.
             header('Location: card-details.php?card_id=' . $cardId . '&status=updated');
             exit;
         }

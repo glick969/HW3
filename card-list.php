@@ -1,10 +1,9 @@
 <?php
 require_once __DIR__ . '/includes/db.php';
 
-// No form or URL values go into this query, so a plain query is fine here.
+
 $giftCards = $pdo->query('SELECT cardId, cardName, points FROM GIFTCARD ORDER BY cardName')->fetchAll();
 
-// Only show messages from this fixed list, never text taken from the URL.
 $statusMessages = [
     'added' => 'Gift card added.',
     'deleted' => 'Gift card deleted.',

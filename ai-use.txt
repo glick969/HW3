@@ -10,4 +10,4 @@ HW2 feedback fixes:
     The </br> tags were removed and spacing is now done in CSS. "Reatail" is fixed because the Card Type dropdown is now built from one list of types in validation.php. The numbered placeholder names were replaced with realistic gift cards like "Amazon $50 Gift Card" in seed.sql.
 
 What I checked or changed:
-    [Fill this in yourself: one thing you verified, revised, or rejected after checking the code against the assignment or requirements document.]
+    

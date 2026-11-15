@@ -1,5 +1,5 @@
 <?php
-// Shared page header. Set $pageTitle before including this file.
+// Shared page header
 $pageTitle = $pageTitle ?? 'AirAsia Rewards';
 ?>
 <!DOCTYPE html>

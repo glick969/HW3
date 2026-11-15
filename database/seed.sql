@@ -1,5 +1,4 @@
 -- AirAsia Rewards Redemption System - HW3 sample data
--- Run after schema.sql. Points are set at 100 points per $1 of card value.
 
 INSERT INTO ACCOUNT (userId, accountType, points) VALUES
     (1, 'Standard', 12500),
@@ -29,3 +28,5 @@ INSERT INTO GIFTCARD (cardName, cardType, cardValue, points) VALUES
     ('Spotify $30 Gift Card',        'Entertainment', 30.00,  3000),
     ('Steam $50 Gift Card',          'Entertainment', 50.00,  5000),
     ('Fandango $20 Gift Card',       'Entertainment', 20.00,  2000);
+
+SELECT ALL from GIFTCARD;

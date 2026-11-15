@@ -2,7 +2,7 @@
 require_once __DIR__ . '/includes/db.php';
 require_once __DIR__ . '/includes/validation.php';
 
-// Start with an empty form.
+
 $values = ['cardName' => '', 'cardType' => '', 'cardValue' => '', 'points' => ''];
 $errors = [];
 
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'points' => $values['points'],
         ]);
 
-        // Redirect so refreshing the list page doesn't submit the form again.
+        
         header('Location: card-list.php?status=added');
         exit;
     }

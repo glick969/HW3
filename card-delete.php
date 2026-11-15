@@ -6,7 +6,7 @@ $isPost = $_SERVER['REQUEST_METHOD'] === 'POST';
 $giftCard = null;
 $errorMessage = '';
 
-// The ID comes from the URL when the page opens and from a hidden field when deletion is confirmed.
+
 $cardId = validate_card_id($isPost ? ($_POST['card_id'] ?? '') : ($_GET['card_id'] ?? ''));
 
 if ($cardId === null) {
@@ -24,7 +24,7 @@ if ($cardId === null) {
     }
 }
 
-// Delete only after the user confirms with the POST form. A GET request only shows the confirmation.
+
 if ($giftCard !== null && $isPost && ($_POST['confirm'] ?? '') === 'yes') {
     $statement = $pdo->prepare('DELETE FROM GIFTCARD WHERE cardId = :cardId');
     $statement->execute(['cardId' => $cardId]);
