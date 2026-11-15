@@ -1,0 +1,13 @@
+AI Tools Used: Claude
+
+Prompt:
+    I am now working on the next assignment for the Air Asia rewards redemption program. Included is the assignment description, as well as a zip file containing the current working version created in the last assignment. can you draft me a new version that includes all requirements for the HW3 version? Follow all instructions included in the assigment description, make sure the required project organization is followed. I was given the following feedback from my previous submission: "Replace </br> with <br>, fix "Reatail" to "Retail," and use realistic gift-card names instead of numbered placeholders". Fix the errors given in the feedback as well.
+
+How AI supported my work:
+    I gave Claude the HW3 assignment, my HW2 code, the requirements document, and my HW2 feedback. It drafted the SQLite schema and seed data, the shared header/nav/footer templates, the PDO connection, the validation functions, the five gift card pages, the validation test page, and first drafts of the README and test report.
+
+HW2 feedback fixes:
+    The </br> tags were removed and spacing is now done in CSS. "Reatail" is fixed because the Card Type dropdown is now built from one list of types in validation.php. The numbered placeholder names were replaced with realistic gift cards like "Amazon $50 Gift Card" in seed.sql.
+
+What I checked or changed:
+    [Fill this in yourself: one thing you verified, revised, or rejected after checking the code against the assignment or requirements document.]
